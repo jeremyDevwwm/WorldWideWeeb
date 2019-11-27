@@ -1,0 +1,400 @@
+/* ####################################################################
+#######################################################################
+########################### INDEX.html ################################
+#######################################################################
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    background-color: rgb(30, 0, 79);
+    overflow: hidden;    
+}
+
+.contain-vignets {
+    position: relative;
+    height:100vh;
+    max-width: 100vw;
+}
+
+.contain-vignets a {
+    text-decoration: none;
+    display: block;
+}
+
+.vignet-left {
+    position: absolute;
+    width:100%;
+    background-image: url("../images/anime.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    max-width: 100vh;
+    height:30%;
+    clip-path: polygon(0 0, 100% 0, 100% 38%, 0 100%);
+    z-index: 100;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+}
+
+
+
+.vignet-left p {
+    font-family: 'Yeon Sung', cursive;
+    padding-left: 2%;
+    padding-top: 4%;
+    color: white;
+    font-size: 2rem;
+    margin:0%;
+}
+
+
+.vignet-centerL {
+    position: absolute;
+    background-image: url("../images/comics.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
+    width:100%;
+    max-width: 100vh;
+    top:21%;
+    height:35%;
+    clip-path: polygon(0 34%, 100% 0, 100% 100%, 0 71%);
+    z-index:50;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.vignet-centerL p {
+    font-family: 'Rock Salt', cursive;
+    padding-left: 60%;
+    padding-top: 4%;
+    color: white;
+    font-size: 1.3rem;
+    max-width: inherit;
+}
+
+.vignet-centerR {
+    position: absolute;
+    background-image: url("../images/videoGames.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
+    width:100%;
+    max-width: 100vh;
+    top:50%;
+    height:30%;
+    clip-path: polygon(0 0, 100% 33%, 100% 66%, 0 100%);
+    z-index:50;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.vignet-centerR p {
+    font-family: 'Turret Road', cursive;
+    padding-left: 10%;
+    padding-top: 4%;
+    color: white;
+    font-size: 2rem;
+    max-width: inherit;
+}
+
+.vignet-right {
+    position: absolute;
+    background-image: url("../images/movie.jpg");
+    background-size: cover;
+    background-position:left;
+    width:100%;
+    max-width: 100vw;
+    bottom:0%;
+    height:30%;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 100%);
+    z-index:50;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.vignet-right p {
+    font-family: 'Cinzel', serif;
+    padding-left: 20%;
+    padding-top: 10%;
+    color: white;
+    font-size: 2rem;
+    max-width: inherit;
+}
+
+/* ##################################### 
+MEDIA QUERIES 
+################################################ */
+
+@media screen and (min-width: 767px){
+    body {
+        overflow: hidden;
+    }
+
+    .contain-vignets {
+        width:100vw;
+    }
+
+    .vignet-left {
+        clip-path: polygon(0 0, 39% 0, 100% 100%, 0 100%);
+        background-position-x: -520px;
+        height: 100vh;
+        width:30%;
+        margin:0%;
+    }
+
+    .vignet-left p {
+        padding-left: 2%;
+        padding-top: 4%;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .vignet-centerL {
+        clip-path: polygon(0 0, 100% 0, 73% 100%, 36% 100%);
+        height:100vh;
+        top:0%;
+        left:20%;
+        width:35%;
+    }
+
+    .vignet-centerL p {
+        padding-left: 30%;
+        padding-top: 4%;
+        color: white;
+        font-size: 1.5rem;
+    }
+  
+    .vignet-centerR {
+        clip-path: polygon(18% 0, 56% 0, 100% 100%, 0 100%);
+        height:100vh;
+        width:35%;
+        top:0%;
+        right:15%;
+    }
+
+    .vignet-centerR p {
+        padding-left: 15%;
+        padding-top: 4%;
+        color: white;
+        font-size: 3rem;
+    }
+
+    .vignet-right {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%);
+        background-position-x: -350px;
+        align-items: center;
+        height:100vh;
+        width:30%;
+        top:0%;
+        right:0%;
+    }
+
+    .vignet-right p {
+        padding-top: 4%;
+        padding-left:6rem;
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 960px){
+
+
+    .vignet-left{
+        filter:grayscale(1);
+        transform: scale(1,1);
+        transition : filter 0.4s, transform 0.4s;
+    }
+
+    .vignet-left:hover {
+        filter : grayscale(0);
+        transform : scale(1.025,1.025);
+    }
+
+
+    .vignet-left p {
+        padding-left: 5%;
+        padding-top: 4%;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .vignet-centerL, .nav-comics{
+        filter: grayscale(1);
+        transform: scale(1,1);
+        transition : filter 0.4s, transform 0.4s;
+    }
+
+    .vignet-centerL:hover, .nav-comics:hover {
+        filter : grayscale(0);
+        transform : scale(1.025,1.025);
+    }
+
+    .comics-text{
+        font-size: 3rem !important;
+    }
+
+    .vignet-centerL p {
+        padding-left: 30%;
+        padding-top: 4%;
+        color: white;
+        font-size: 2rem;
+    }
+
+
+    .vignet-centerR, .nav-video-games{
+    filter: grayscale(1);
+    transform: scale(1,1);
+    transition : filter 0.4s, transform 0.4s;
+    }
+
+    .vignet-centerR:hover, .nav-video-games:hover {
+        filter : grayscale(0);
+        transform : scale(1.025,1.025);
+    }
+
+    .video-games-text{
+        font-size: 3rem !important;
+    }
+
+    .vignet-centerR p {
+        padding-left: 15%;
+        padding-top: 4%;
+        color: white;
+        font-size: 2.5rem;
+    }
+    .vignet-right, .nav-movies{
+        filter: grayscale(1);
+        transform: scale(1,1);
+        transition : filter 0.4s, transform 0.4s;
+    }
+
+    .vignet-right:hover, .nav-movies:hover {
+        filter : grayscale(0);
+        transform : scale(1.025,1.025);
+    }
+
+    .movies-text{
+        font-size: 3rem !important;
+
+    }
+
+    .vignet-right p {
+        padding-top: 4%;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+
+}
+
+
+/* ####################################################################
+#######################################################################
+########################### animexmanga.html ##########################
+#######################################################################
+*/
+.contain-vignets-2 {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+    height:20vh;
+    max-width: 100vw;
+}
+
+.nav-comics {
+    position:absolute;
+    background-image: url("../images/comics_nav.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1);
+    width:35%;
+    height: 100%;
+    left:0%;
+    z-index:100;
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+    background-color: chocolate;
+}
+
+.comics-text {
+    font-family: 'Rock Salt', cursive;
+    color: white;
+    font-size: 1.3rem;
+    max-width: inherit;
+}
+
+.comics-text {
+    padding-right: 15%;
+}
+
+.nav-video-games {
+    position: absolute;
+    background-image: url("../images/videogames_nav.png");
+    background-size: cover;
+    background-position-x: -110px;
+    background-position-y: center;
+    filter: grayscale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    height: 100%;
+    left:25%;
+    z-index:10;
+    background-color: green;
+}
+
+.video-games-text{
+    font-family: 'Turret Road', cursive;
+    color: white;
+    font-size: 2rem;
+    max-width: inherit;
+}
+
+.video-games-text {
+    padding-right:25%;
+}
+
+.nav-movies {
+    position: absolute;
+    background-image: url("../images/movie_nav.png");
+    background-size: cover;
+    background-position-y:center;
+    filter: grayscale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:35%;
+    height: 100%;
+    right: 0%;
+    z-index:100;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 31% 100%);
+    background-color: goldenrod;
+}
+
+.movies-text {
+    padding-left:15%;
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 1.5rem;
+    max-width: inherit;
+}
