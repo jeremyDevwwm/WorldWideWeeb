@@ -1,4 +1,4 @@
-<body>
+<body class="first_page">
     <div class="contain-vignets">
 
             <a href="animexmanga.php">
